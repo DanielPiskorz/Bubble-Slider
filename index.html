@@ -4,22 +4,7 @@
     <title>Bubble slideshow</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-    	$(document).ready(function () {
-     		$(".bubble").click(function () {
-     			$(".bubble").css("background-color", "white");
-     			$(this).css("background-color", "#999");
-     			var id = parseInt(this.id.substring(1)); 
-     			var path = "img/img" + id + ".jpg";
-
-     			$("#selectedImg").fadeOut(500, function(){
-     			    $(this).attr("src", path).bind("onreadystatechange load", function(){
-         				if (this.complete) $(this).fadeIn(500);
-          			});
-     			});
-    		});
-     	});
-    </script>
+    <script src="script.js"></script>
   </head>
   <body>
     <div id="container">
