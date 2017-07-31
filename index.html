@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bubble slideshow</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function () {
+     		$(".bubble").click(function () {
+     			var id = parseInt(this.id.substring(1)); 
+     			var path = "img/img" + id + ".jpg";
+     			$("#selectedImg").attr("src", path);
+     		});
+    	});
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header></header>
+      <div id="image">
+      	<img id="selectedImg" src="img/img1.jpg"/>
+      </div>
+      <div id="bubbles">
+      	<div id="b1" class="bubble"></div>
+      	<div id="b2" class="bubble"></div>
+      	<div id="b3" class="bubble"></div>
+      	<div id="b4" class="bubble"></div>
+      	<div id="b5" class="bubble"></div>
+      </div>
+    </div>
+  </body>
+</html>
