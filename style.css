@@ -1,11 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
 *{
 	margin: 0;
 	padding: 0;
 }
 
+body{
+	text-align: center;
+	background-color: #DEECFF;
 
-.bubble{
+}
+
+header{
+	font-family: 'Indie Flower', cursive;
+	margin: 10px 0;
+	color: #333;
+}
+
+
+#image{
+	height : calc(100vh - 200px);
+	width: 100%;
+	border-top: 3px solid white;
+	border-bottom: 3px solid white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #F3F8FF;
+}
+
+#selectedImg{
+	height:100%;
+	border-radius: 5px;
+
+}
+
+#bubbles{
+	height: 40px;
+	max-width: 210px;
+	margin: 10px auto;
+}
+
+#bubbles > .bubble{
+	float:left;
+	margin: 10px;
 	width: 20px;
 	height: 20px;
-	background-color: red;
+	background-color: white;
+	border: 1px solid #444;
+	border-radius: 15px;
 }
