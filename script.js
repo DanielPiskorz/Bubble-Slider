@@ -2,12 +2,22 @@ var imageNumber = 1;
 
 $(document).ready(function () {
     update();
+
+    //manual change
     $(".bubble").click(function () {
      	var nr = parseInt(this.id.substring(1)); 
      	imageNumber = nr;
         update();
     });
 
+    //automatic change
+    setInterval(function(){ 
+         if(imageNumber < 5)
+            imageNumber++;
+        else
+            imageNumber = 1;
+        update();
+     }, 3500);       
 });
 
 function update(){
