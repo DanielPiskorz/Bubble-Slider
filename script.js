@@ -1,4 +1,5 @@
 var imageNumber = 1;
+var timer;
 
 $(document).ready(function () {
     update();
@@ -10,20 +11,24 @@ $(document).ready(function () {
         update();
     });
 
-    //automatic change
-    setInterval(function(){ 
-         if(imageNumber < 5)
-            imageNumber++;
-        else
-            imageNumber = 1;
-        update();
-     }, 3500);       
 });
+
+function nextImage(){
+    if(imageNumber < 5)
+        imageNumber++;
+    else
+        imageNumber = 1;
+    update();
+}
 
 function update(){
     changeBubbles();
     const path = "img/img" + imageNumber + ".jpg";
     changeImage(path);
+
+    //automatic change
+    clearInterval(timer);
+    timer = setInterval(nextImage, 3500);
 }
 
 function changeBubbles(){
