@@ -1,20 +1,24 @@
+var imageNumber = 1;
+
 $(document).ready(function () {
-    change(1);
+    update();
     $(".bubble").click(function () {
      	var nr = parseInt(this.id.substring(1)); 
-     	change(nr)
+     	imageNumber = nr;
+        update();
     });
+
 });
 
-function change(number){
-    changeBubbles(number);
-    const path = "img/img" + number + ".jpg";
+function update(){
+    changeBubbles();
+    const path = "img/img" + imageNumber + ".jpg";
     changeImage(path);
 }
 
-function changeBubbles(nr){
+function changeBubbles(){
     $(".bubble").css("background-color", "white");
-    const bbl = "#b" + nr;
+    const bbl = "#b" + imageNumber;
     $(bbl).css("background-color", "#999");
 }
 
